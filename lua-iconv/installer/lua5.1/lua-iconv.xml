@@ -8,7 +8,7 @@
 	      extension="tar.xz"
 	      platform="@JONCHKI_PLATFORM@">
 		<license name="MIT"/>
-		<author name="Alexandre Erwin Ittner" url="https://github.com/sqmedeiros/lpeglabel/" />
+		<author name="Alexandre Erwin Ittner" url="https://github.com/ittner/lua-iconv" />
 		<description>
 			Lua-iconv is a binding to libiconv for the Lua Programming Language. The
 			iconv library converts a sequence of characters from one codeset into a
