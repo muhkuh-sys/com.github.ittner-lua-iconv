@@ -23,7 +23,7 @@ SET_TARGET_PROPERTIES(TARGET_luaiconv PROPERTIES PREFIX "" OUTPUT_NAME "iconv")
 
 # On mingw link all compiler libraries static.
 IF((${CMAKE_SYSTEM_NAME} STREQUAL "Windows") AND (${CMAKE_COMPILER_IS_GNUCC}))
-	SET_PROPERTY(TARGET TARGET_lpeglabel PROPERTY LINK_FLAGS "-static -static-libgcc -static-libstdc++")
+	SET_PROPERTY(TARGET TARGET_luaiconv PROPERTY LINK_FLAGS "-static -static-libgcc -static-libstdc++")
 ENDIF((${CMAKE_SYSTEM_NAME} STREQUAL "Windows") AND (${CMAKE_COMPILER_IS_GNUCC}))
 
 # Install the lua module.
