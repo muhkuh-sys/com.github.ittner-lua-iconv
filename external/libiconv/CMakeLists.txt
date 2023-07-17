@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.7)
 #
 PROJECT("libiconv")
 
-SET(VERSION_EXTERNAL "1.16")
+SET(VERSION_EXTERNAL "1.17")
 
 INCLUDE(ExternalProject)
 
@@ -39,7 +39,7 @@ ENDIF(${CMAKE_CROSSCOMPILING})
 ExternalProject_Add(TARGET_libiconv
                     PREFIX ${CMAKE_CURRENT_BINARY_DIR}/libiconv
                     URL ${CMAKE_CURRENT_SOURCE_DIR}/libiconv-${VERSION_EXTERNAL}.tar.gz
-                    URL_HASH SHA1=2d9d1d8fa9f7859b181de984d60eacd2499a5701
+                    URL_HASH SHA1=409a6a8c07280e02cc33b65ae871311f4b33077b
                     CONFIGURE_COMMAND ${CMAKE_COMMAND} -E env "CFLAGS=${CMAKE_C_FLAGS}" "CPPFLAGS=${CMAKE_CXX_FLAGS}" ${CMAKE_CURRENT_BINARY_DIR}/libiconv/src/TARGET_libiconv/configure --prefix=${CMAKE_CURRENT_BINARY_DIR}/install --enable-static=yes --enable-shared=no --with-pic ${CONFIGURE_HOST}
                     BUILD_COMMAND make
                     INSTALL_COMMAND make install
